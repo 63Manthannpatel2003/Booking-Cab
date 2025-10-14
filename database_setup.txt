@@ -1,0 +1,29 @@
+-- s105974663_db
+-- Student Name: Manthan Patel
+-- Student ID: s105974663
+
+-- Create Customer Table
+CREATE TABLE customer (
+    email_address VARCHAR(100) PRIMARY KEY,
+    customer_name VARCHAR(100) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL
+);
+
+-- Create Booking Table
+CREATE TABLE booking (
+    booking_number VARCHAR(20) PRIMARY KEY,
+    customer_email VARCHAR(100) NOT NULL,
+    passenger_name VARCHAR(100) NOT NULL,
+    passenger_phone VARCHAR(20) NOT NULL,
+    unit_number VARCHAR(10),
+    street_number VARCHAR(10) NOT NULL,
+    street_name VARCHAR(100) NOT NULL,
+    suburb VARCHAR(50) NOT NULL,
+    destination_suburb VARCHAR(50) NOT NULL,
+    pickup_date DATE NOT NULL,
+    pickup_time TIME NOT NULL,
+    booking_datetime DATETIME NOT NULL,
+    status VARCHAR(20) DEFAULT 'unassigned',
+    FOREIGN KEY (customer_email) REFERENCES customer(email_address)
+);

@@ -1,0 +1,101 @@
+CabsOnline Project 1 - README
+
+Student Name : Manthan Navneetkumar Patel  
+Student ID : 105974663@student.swin.edu.au 
+Unit: COS80021 - Web Application Development  
+
+Project URL
+URL: https://mercury.swin.edu.au/cos80021/s105974663/Project1/ 
+
+System Description
+CabsOnline is a web-based taxi booking system that allows customers to register, login, and book taxi services online. The system includes an admin panel for managing bookings.
+
+How to Use the System
+
+For Customers:
+
+1. New Customers – Registration 
+   - Visit: register.php
+   - Fill in all required fields (Customer Name, Password, Re-type Password, Email, Phone)
+   - Email must be unique in the system
+   - Passwords must match
+   - Upon successful registration, you will be redirected to the booking page
+
+2. Existing Customers - Login
+   - Visit: login.php
+   - Enter your email address and password
+   - Upon successful login, you will be redirected to the booking page
+
+3. Making a Booking
+   - Fill in all required fields on the booking page
+   - Unit number is optional
+   - Pick-up date/time must be at least 40 minutes from current time
+   - You will receive a booking reference number and confirmation email
+
+For Admin:
+
+4. Admin Functions:
+   - Visit: admin.php
+   - List All: Shows unassigned bookings with pick-up time within next 2 hours
+   - Assign: Enter booking reference number to assign a taxi to that booking
+
+Files in the System
+
+PHP Files:
+- register.php - Customer registration page
+- login.php - Customer login page  
+- booking.php - Taxi booking form and processing
+- admin.php - Admin panel for viewing and managing bookings
+
+
+
+
+Database Files:
+- database_setup.txt - MySQL commands to create required tables
+
+Documentation:
+- readme.doc - This file with system instructions
+- Checklist-for-Project_1 - Task completion checklist
+
+Database Tables
+
+customer table:
+- email (PRIMARY KEY)
+- customer_name
+- password (hashed)
+- phone
+
+booking table:
+- booking_number (PRIMARY KEY)
+- customer_email (FOREIGN KEY)
+- passenger_name
+- passenger_phone
+- unit_number (nullable)
+- street_number
+- street_name
+- suburb
+- destination_suburb
+- pickup_date
+- pickup_time
+- booking_datetime
+- status (default: 'unassigned')
+
+Technical Notes
+
+- All passwords are hashed using PHP's password_hash() function
+- Sessions are used to maintain user login state
+- Email notifications are sent using PHP's mail() function
+- Input validation and error handling implemented throughout
+- SQL injection protection using prepared statements
+- All pages display student ID in top-right corner
+
+Setup Instructions
+
+1. Upload all files to Mercury ~/Project1/ directory
+2. Create database tables using commands in database_setup.txt
+3. Update database connection details in all PHP files
+4. Update student email in booking.php mail function
+5. Test all functionality before submission
+
+Browser Compatibility
+Tested on modern browsers including Chrome, Firefox, Safari, and Edge.
