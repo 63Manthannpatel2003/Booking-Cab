@@ -1,11 +1,8 @@
 CabsOnline Project 1 - README
 
 Student Name : Manthan Navneetkumar Patel  
-Student ID : 105974663@student.swin.edu.au 
 Unit: COS80021 - Web Application Development  
 
-Project URL
-URL: https://mercury.swin.edu.au/cos80021/s105974663/Project1/ 
 
 System Description
 CabsOnline is a web-based taxi booking system that allows customers to register, login, and book taxi services online. The system includes an admin panel for managing bookings.
@@ -14,7 +11,7 @@ How to Use the System
 
 For Customers:
 
-1. New Customers – Registration 
+1. New Customers â€“ Registration 
    - Visit: register.php
    - Fill in all required fields (Customer Name, Password, Re-type Password, Email, Phone)
    - Email must be unique in the system
